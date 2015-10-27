@@ -1,0 +1,23 @@
+{
+    "name": "cordova-image-audio-merger",
+    "version": "1.0.0",
+    "cordova": {
+        "id": "cordova-image-audio-merger",
+        "platforms": [
+             "ios"
+        ]
+    },
+    "description": "Cordova P Plugin",
+    "license": "Apache 2.0",
+    "repository":{
+        "type": "git",
+        "url": "https://github.com/ccapndave/cordova-image-audio-merger"
+    },
+    "keywords": [
+        "cordova",
+        "ecosystem:cordova",
+        "cordova-android"
+    ],
+    "engines": [],
+    "author": "Dave Keen"
+}

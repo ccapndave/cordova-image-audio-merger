@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-image-audio-merger"
+        version="0.1.0">
+
+  <name>Image Audio Merger</name>
+
+  <engines>
+      <engine name="cordova-android" version=">=4"/>
+      <engine name="cordova-plugman" version=">=4.2.0"/><!-- needed for gradleReference support -->
+  </engines>
+
+  <asset src="www/imageaudiomerger.js" target="js/imageaudiomerger.js"/>
+
+  <js-module src="www/imageaudiomerger.js" name="imageaudiomerger">
+    <clobbers target="window.imageaudiomerger" />
+  </js-module>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/widget">
+      <feature name="ImageAudioMerger">
+        <param name="ios-package" value="IAMerger" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/IAMerger.h" target-dir="IAMergerPlugin"/>
+    <source-file src="src/ios/IAMerger.m" target-dir="IAMergerPlugin"/>
+    <source-file src="src/ios/MovieMaker.h" target-dir="IAMergerPlugin"/>
+    <source-file src="src/ios/MovieMaker.m" target-dir="IAMergerPlugin"/>
+  </platform>
+
+</plugin>
